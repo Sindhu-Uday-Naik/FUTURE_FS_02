@@ -1,0 +1,74 @@
+{
+  "orders": [
+    {
+      "id": 1756815933249,
+      "items": [
+        {
+          "productId": 5,
+          "title": "Imperial Eclipse",
+          "price": 36500,
+          "qty": 1
+        }
+      ],
+      "subtotal": 36500,
+      "name": "Manjula Uday Naik",
+      "email": "manjulaudaynaik@gmail.com",
+      "address": "443, Madhurapriya",
+      "createdAt": "2025-09-02T12:25:33.249Z"
+    },
+    {
+      "id": 1756815964336,
+      "items": [
+        {
+          "productId": 3,
+          "title": "Sandstone Authority",
+          "price": 31000,
+          "qty": 1
+        }
+      ],
+      "subtotal": 31000,
+      "name": "Manjula Uday Naik",
+      "email": "manjulaudaynaik@gmail.com",
+      "address": "443, Madhurapriya\nMarathikoppa, Behind Old Rajadhani Finance",
+      "createdAt": "2025-09-02T12:26:04.336Z"
+    },
+    {
+      "id": 1756816415016,
+      "items": [
+        {
+          "productId": 3,
+          "title": "Sandstone Authority",
+          "price": 31000,
+          "qty": 1
+        }
+      ],
+      "total": 31000,
+      "name": "Manjula Uday Naik",
+      "email": "manjulaudaynaik@gmail.com",
+      "address": "443, Madhurapriya\nMarathikoppa, Behind Old Rajadhani Finance",
+      "createdAt": "2025-09-02T12:33:35.016Z"
+    },
+    {
+      "id": 1756816532106,
+      "items": [
+        {
+          "productId": 9,
+          "title": "Midnight Tides",
+          "price": 44000,
+          "qty": 1
+        },
+        {
+          "productId": 10,
+          "title": "Crimson Reverie",
+          "price": 46500,
+          "qty": 1
+        }
+      ],
+      "total": 90500,
+      "name": "Manjula Uday Naik",
+      "email": "manjulaudaynaik@gmail.com",
+      "address": "443, Madhurapriya",
+      "createdAt": "2025-09-02T12:35:32.106Z"
+    }
+  ]
+}
