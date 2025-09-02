@@ -69,6 +69,38 @@
       "email": "manjulaudaynaik@gmail.com",
       "address": "443, Madhurapriya",
       "createdAt": "2025-09-02T12:35:32.106Z"
+    },
+    {
+      "id": 1756820707482,
+      "items": [
+        {
+          "productId": 8,
+          "title": "Obsidian Flame",
+          "price": 45000,
+          "qty": 1
+        }
+      ],
+      "total": 45000,
+      "name": "Manjula Uday Naik",
+      "email": "manjulaudaynaik@gmail.com",
+      "address": "443, Madhurapriya\nMarathikoppa, Behind Old Rajadhani Finance",
+      "createdAt": "2025-09-02T13:45:07.482Z"
+    },
+    {
+      "id": 1756821912444,
+      "items": [
+        {
+          "productId": 6,
+          "title": "Ivory Fold",
+          "price": 29500,
+          "qty": 1
+        }
+      ],
+      "total": 29500,
+      "name": "Manjula Uday Naik",
+      "email": "manjulaudaynaik@gmail.com",
+      "address": "443, Madhurapriya",
+      "createdAt": "2025-09-02T14:05:12.444Z"
     }
   ]
 }
