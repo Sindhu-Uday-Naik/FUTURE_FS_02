@@ -315,7 +315,7 @@ export default function ProductDetail() {
     <div className="flex flex-col items-center justify-center min-h-screen text-white">
       <div className="max-w-md text-center">
         <img
-          src={`${API}${product.image}`} // ✅ use API instead of hardcoded localhost
+          src={`${import.meta.env.VITE_API_URL}${product.image}`} // ✅ use API instead of hardcoded localhost
           alt={product.title}
           className="mx-auto rounded-lg shadow-lg"
           style={{ width: "500px", height: "500px", objectFit: "contain" }}

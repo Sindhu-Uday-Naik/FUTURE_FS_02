@@ -221,7 +221,7 @@ export default function Home() {
     //   ))}
     // </div>
     // <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-    <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+    <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
 
   {products.map((product) => (
     <ProductCard key={product.id} product={product} />
