@@ -83,14 +83,90 @@ app.get("/api/products/:id", (req, res) => {
 });
 
 
+// // Create order
+// app.post('/api/orders', async (req, res) => {
+//   const { items, total, name, email, address } = req.body;
+//   if (!items || items.length === 0) return res.status(400).json({ message: 'Cart is empty' });
+
+//   if (useMongo) {
+//     try {
+//       const order = new OrderModel({ items, total, name, email, address });
+//       const saved = await order.save();
+//       return res.json({ id: saved._id, message: 'Order placed', order: saved });
+//     } catch (err) {
+//       console.error(err);
+//       return res.status(500).json({ message: 'Server error' });
+//     }
+//   } else {
+//     // save to db.json
+//     const dbPath = path.join(__dirname, 'db.json');
+//     const db = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+//     const newOrder = {
+//       id: Date.now(),
+//       items,
+//       total,
+//       name,
+//       email,
+//       address,
+//       createdAt: new Date().toISOString()
+//     };
+//     db.orders.push(newOrder);
+//     fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
+//     return res.json({ id: newOrder.id, message: 'Order placed', order: newOrder });
+//   }
+// });
+
+
+
+// app.post('/api/orders', async (req, res) => {
+//   const { items, total, name, email, address, userEmail } = req.body;
+//   if (!items || items.length === 0) return res.status(400).json({ message: 'Cart is empty' });
+
+//   if (useMongo) {
+//     try {
+//       const order = new OrderModel({ items, total, name, email, address, userEmail });
+//       const saved = await order.save();
+//       return res.json({ id: saved._id, message: 'Order placed', order: saved });
+//     } catch (err) {
+//       console.error(err);
+//       return res.status(500).json({ message: 'Server error' });
+//     }
+//   } else {
+//     const dbPath = path.join(__dirname, 'db.json');
+//     const db = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+//     const newOrder = {
+//       id: Date.now(),
+//       items,
+//       total,
+//       name,
+//       email,
+//       address,
+//       userEmail,   // ✅ add logged-in user’s email
+//       createdAt: new Date().toISOString()
+//     };
+//     db.orders.push(newOrder);
+//     fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
+//     return res.json({ id: newOrder.id, message: 'Order placed', order: newOrder });
+//   }
+// });
+
+
+
+
 // Create order
 app.post('/api/orders', async (req, res) => {
-  const { items, total, name, email, address } = req.body;
+  const { items, total, userEmail, name, address } = req.body;
   if (!items || items.length === 0) return res.status(400).json({ message: 'Cart is empty' });
 
   if (useMongo) {
     try {
-      const order = new OrderModel({ items, total, name, email, address });
+      const order = new OrderModel({
+        items,
+        total,
+        name,
+        email: userEmail,   // ✅ store correctly
+        address,
+      });
       const saved = await order.save();
       return res.json({ id: saved._id, message: 'Order placed', order: saved });
     } catch (err) {
@@ -106,15 +182,17 @@ app.post('/api/orders', async (req, res) => {
       items,
       total,
       name,
-      email,
+      email: userEmail,   // ✅ store correctly
       address,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     };
     db.orders.push(newOrder);
     fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
     return res.json({ id: newOrder.id, message: 'Order placed', order: newOrder });
   }
 });
+
+
 
 // Get orders (for admin / history)
 app.get('/api/orders', async (req, res) => {
