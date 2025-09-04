@@ -206,7 +206,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 
-const API = import.meta.env.VITE_API_URL || "https://future-fs-02-backend-5jin.onrender.com";
+const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 export default function Orders() {
   const { user } = useAuth();

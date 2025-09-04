@@ -352,9 +352,9 @@ export default function Checkout() {
         body: JSON.stringify({
           items: cart,
           total: subtotal,
-          userEmail: user?.email || null, // ✅ attach logged-in user’s email
-          name: formData.name || user?.name || "Guest",
-          address: `${formData.address}, ${formData.city}, ${formData.postalCode}, ${formData.country}`,
+          email: user?.email || null, // ✅ attach logged-in user’s email
+          name: user?.name || "Guest",
+          address: "N/A",
         }),
       });
 
