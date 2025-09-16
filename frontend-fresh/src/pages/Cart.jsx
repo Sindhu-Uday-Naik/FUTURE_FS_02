@@ -312,7 +312,7 @@ export default function Cart() {
                           : `${API}${item.image}`
                       }
                       alt={item.title}
-                      className="w-16 h-20 object-cover rounded bg-white p-1"
+                      className="w-72px h-56px object-cover rounded bg-white p-1"
                       onError={(e) => {
                         e.currentTarget.src =
                           "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D'64'%20height%3D'80'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23000'%20/%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20fill%3D'%23fff'%20font-size%3D'10'%20text-anchor%3D'middle'%20dominant-baseline%3D'middle'%3ENo%20Image%3C/text%3E%3C/svg%3E";
