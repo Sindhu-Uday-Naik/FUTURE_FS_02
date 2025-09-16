@@ -201,7 +201,7 @@ export default function Cart() {
                           : `${API}${item.image}`
                       }
                       alt={item.title}
-                      className="w-28 h-28 object-contain rounded bg-white p-2"
+                      className="w-16 h-20 object-cover rounded bg-white p-1"
                       onError={(e) => {
                         // fallback if image fails
                         e.currentTarget.src =
